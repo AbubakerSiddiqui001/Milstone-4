@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editable Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+  <form id="resume-form">
+    <h2> <img src="./images/personal info.png" alt="" class="icon"> Personal Information </h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="name">Father Name:</label>
+    <input type="text" id="fname" name="fname" required />
+
+    <label for="date">Date of Birth:</label>
+    <input type="date" id="date" name="date" required />
+
+    <label for="nationality"> Nationality: </label>
+    <input type="text" id="nationality" name="nationality" required />
+
+    <label for="religion"> Religion: </label>
+    <input type="text" id="religion" name="religion" required />
+
+    <label for="profilePic">Profile Picture:</label>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+
+    <img id="profilePreview" alt="Profile Preview" />
+
+    <h2> <img src="./images/educations.png" alt=""> Education</h2>
+    <label for="graduate">Graduation: <em> (Optional) </em></label>
+    <input type="text" placeholder="Comma seprated" id="graduate" name="graduate"/>
+
+    <label for="graduate">Graduation Year: <em> (Optional) </em></label>
+    <input type="text" placeholder="Comma seprated" id="graduate-year" name="graduate"/>
+
+    <label for="text"> Inter: </label>
+    <input type="text" id="inter" name="inter" required />
+
+    <label for="text">Inter Year:</label>
+    <input type="text" id="inter-year" name="inter" required />
+
+    <h2> <img src="./images/skills.png" alt=""> Skills</h2>
+    <label for="skills">Skills (comma separated):</label>
+    <input type="text" id="skills" name="skills" required />
+
+    <h2> <img src="./images/skills.png" alt=""> Experince </h2>
+    <label for="skills">Skills (comma separated):</label>
+    <input type="text" id="experince" placeholder="(comma separated):" name="experince" required />
+
+    <h2> <img src="./images/contact.png" alt=""> Contact Me </h2>
+    <label for="email">Email:</label>
+    <input type="email" id="email-two" name="skills" required />
+
+    <label for="tel">Cell:</label>
+    <input type="tel" id="cel" name="cell" required />
+
+    <button type="submit">Generate Resume</button>
+  </form>
+  <div id="resume" contenteditable="true" style="display: none;"></div>
+  <script src="script.js"></script>
+</body>
+</html>
